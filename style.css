@@ -1,0 +1,53 @@
+@import url("assets/styles/header.css");
+@import url("assets/styles/menu-lateral.css");
+@import url("assets/styles/navbar.css");
+@import url("assets/styles/recentes.css");
+@import url("assets/styles/secao-vertical.css");
+@import url("assets/styles/rodape.css");
+
+:root {
+    --azul-escuro: #041833;
+    --azul-medio: #154580;
+    --azul-degrade: linear-gradient(180deg, var(--azul-medio) 0%, var(--azul-escuro) 100%);
+    --verde: #84EEC1;
+    --cinza: rgba(196, 196, 196, 0.2);
+    --cor-textos: #ffffff;
+    --cor-de-fundo: var(--azul-degrade);
+    --fonte-principal: 'Open Sans', sans-serif;
+}
+
+body {
+    background: var(--cor-de-fundo) no-repeat;
+    font-family: var(--fonte-principal);
+    color: var(--cor-textos);
+}
+
+button {
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+.principal {
+    padding: 0 1rem 6rem 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+    body {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-template-areas: 
+            "aside header"
+            "aside main"
+        ;
+    }
+
+    .principal {
+        grid-area: main;
+        padding: 0 1rem 10rem 1rem;
+    }
+
+    .navbar {
+        display: none;
+    }
+}

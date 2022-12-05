@@ -1,0 +1,41 @@
+.navbar {
+    background-color: var(--azul-escuro);
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    opacity: 0.9;
+    z-index: 10;
+}
+
+.navbar__lista {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 80%;
+    margin: .5rem auto;
+}
+
+.navbar__item {
+    text-align: center;
+}
+
+.navbar__link {
+    text-decoration: none;
+    color: var(--branco);
+}
+
+.navbar__link::before {
+    display: block;
+    margin-bottom: 3px;
+}
+
+.navbar__link--home::before {
+    content: url("../img/icone-home-mb.svg");
+}
+
+.navbar__link--busca::before {
+    content: url("../img/icone-busca-mb.svg");
+}
+
+.navbar__link--biblioteca::before {
+    content: url("../img/icone-biblioteca-mb.svg");
+}
